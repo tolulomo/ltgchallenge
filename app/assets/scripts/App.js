@@ -6,6 +6,7 @@ new MobileMenu();
 
 //Calculation Logics
 new CalcEntries();
+
 if(module.hot){
     module.hot.accept();
 }

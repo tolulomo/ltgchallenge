@@ -13,13 +13,13 @@ class CalcEntry {
         window.addEventListener("click", (e) => this.buttonPressed(e))
     }
 
-    async buttonPressed(e){
+    buttonPressed(e){
         const element = e.target.closest(".calc__row-item");
         if(!element){
             return
         }
 
-        await this.calculator.runEntryFunction(element.dataset.btn);
+        this.calculator.runEntryFunction(element.dataset.btn);
         this.calcData();
     }
 

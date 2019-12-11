@@ -1,9 +1,9 @@
 const runTaskType = process.env.npm_lifecycle_event;
+const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const fse = require('fs-extra');
-const path = require('path')
 
 const postCSSPlugins = [
   require('postcss-import'),
@@ -62,7 +62,7 @@ if(runTaskType == "devServer"){
 // Production Environment Configuration
 if(runTaskType == "build"){
   config.module.rules.push({
-    test: /\.js$/,
+    test: /\.js$/i,
     exclude: /(node_modules)/,
     use: {
       loader: 'babel-loader',

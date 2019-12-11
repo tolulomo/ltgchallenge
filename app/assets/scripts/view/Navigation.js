@@ -1,4 +1,4 @@
-import debounce from 'lodash/throttle';
+import debounce from 'lodash/debounce';
 import Elements from './Base';
 class MobileMenu {
     constructor() {
