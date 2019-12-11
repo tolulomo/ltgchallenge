@@ -1,0 +1,103 @@
+.theme-1 {
+    color: $text-1;
+
+    & .calc__display {
+        background-color: transparent;
+        @mixin atSmall {
+            background-color: $base-1;
+        }
+    }
+
+    & .calc__row-item {
+        background-color: $button-1;
+        transition: background-color .3s ease-out;
+
+        &:hover,
+        &:focus {
+            background-color: tint($secondary-1, 10%);
+        }
+    }
+
+    & {
+        .function {
+            &-top{
+                background-color: $secondary-1;
+                &:hover,
+                &:focus {
+                    background-color: tint($button-1, 15%);
+                }
+            }
+
+            &-right {
+                background-color: $accent-1;
+                &:hover,
+                &:focus {
+                    background-color: tint($accent-1, 15%);
+                }
+
+            }
+        }
+    }
+
+    &__calculator {
+        background-color: $base-1;
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+}
+
+
+.theme-2 {
+    color: $text-2;
+
+    & .calc__display {
+        background-color: transparent;
+        @mixin atSmall {
+            background-color: $base-2;
+        }
+    }
+
+    & .calc__row-item {
+        background-color: $button-2;
+        transition: background-color .3s ease-out;
+
+        &:hover,
+        &:focus {
+            background-color: tint($secondary-2, 10%);
+        }
+    }
+
+    & {
+        .function {
+            &-top{
+                background-color: $secondary-2;
+                &:hover,
+                &:focus {
+                    background-color: tint($button-2, 15%);
+                }
+            }
+
+            &-right {
+                background-color: $accent-2;
+                &:hover,
+                &:focus {
+                    background-color: tint($accent-2, 15%);
+                }
+            }
+        }
+    }
+
+    &__calculator {
+        background-color: $base-2;
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+}

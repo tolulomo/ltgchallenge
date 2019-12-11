@@ -1,0 +1,95 @@
+.navigation {
+    @mixin atSmall {
+        background-color: transparent;
+    }
+
+    @mixin atMedium {
+        background-color: $base-1;
+        border-bottom: .1rem solid $accent-1;
+        box-shadow: 0 0 5px 0 $secondary-1;
+        @mixin clearfix {}
+    }
+
+    &__menu {
+        visibility: hidden;
+        opacity: 0;
+        height: 95rem;
+        width: 95rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+        transition: all .8s cubic-bezier(0.86, 0, 0.07, 1);
+        @mixin atMedium {
+            visibility: visible;
+            opacity: 1;
+            position: inherit;
+            transform: translate(0);
+            transition: none;
+            background-image: none;
+            border-radius: 0;
+            height: auto;
+            width: auto;
+            float: right;
+        }
+
+        &.show-menu {
+            transform: translate(-50%,-50%);
+            background-image: radial-gradient($accent-1, $base-1);
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    
+    ul {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        list-style: none;
+        text-align: center;
+        @mixin atMedium {
+            position: inherit;
+            transform: translate(0);
+            margin: 0;
+            padding-top: .4rem;
+            padding-bottom: 1.2rem;
+            @mixin clearfix {}
+        }
+        
+
+        li {
+            display: block;
+            margin: 4rem 0;
+            @mixin atMedium {
+                float: left;
+                margin: 0 0;
+                padding: 0 1.5rem;
+            }
+
+            a {
+                text-decoration: none;
+                font-weight: 300;
+                color: $accent-1;
+                background-color: $secondary-1;
+                padding: 1rem 8rem;
+                font-size: 1.2rem;
+                transition: all .3s ease-out;
+                box-shadow: 0 0 4px .5px $base-1;
+                border-radius: .3rem;
+
+                &.is-current-link {
+                    color: $text-1;
+                    background-color: $accent-1;
+                }
+
+                @mixin atMedium {
+                    padding: .6rem 2rem;
+                    border-radius:0;
+                }
+            }
+        }
+    }
+
+}

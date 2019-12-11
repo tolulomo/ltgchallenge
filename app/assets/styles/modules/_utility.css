@@ -1,12 +1,22 @@
 .wrapper {
-    max-width: 100rem;
-    padding: .8rem;
-    margin-left: auto;
-    margin-right: auto;
     &--calc {
         max-width: 40rem;
-        box-shadow: 1px 1px 5px 1px $secondary-1;
-        border-radius: .4rem;
+        
+
+        @mixin atSmall {
+            box-shadow: 1px 1px 5px 1px $secondary-1;
+        }
+    }
+    @mixin atSmall {
+        max-width: 100rem;
+        padding: .8rem;
+        margin-left: auto;
+        margin-right: auto;
+        &--calc {
+            max-width: 40rem;
+            box-shadow: 1px 1px 5px 1px $secondary-1;
+            border-radius: .4rem;
+        }
     }
     
 }

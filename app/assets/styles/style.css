@@ -4,4 +4,6 @@
 @import 'base/_mixin.css';
 @import 'modules/_calcstyling.css';
 @import 'modules/_utility.css';
-@import 'modules/_theming.css';
+@import 'modules/_themes.css';
+@import 'modules/_navigation.css';
+@import 'modules/_mobile-icon.css';

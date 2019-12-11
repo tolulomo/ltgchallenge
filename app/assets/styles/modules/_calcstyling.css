@@ -1,17 +1,26 @@
+
 .calc {
     &__main {
+        width: 100%;
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 100vw;
+        bottom: 0;
+        transition: all .4s ease-out;
+        @mixin atSmall {
+            width: 100vw;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
 
     &__display {
-        padding: 5rem 1rem .5rem 1rem;
+        padding: 10rem 1rem .5rem 1rem;
         margin: 0;
         font-weight: 200;
         font-size: 6rem;
         text-align: right;
+        @mixin atSmall {
+            padding: 5rem 1rem .5rem 1rem;
+        }
     }
 
     &__row{
@@ -31,7 +40,7 @@
             font-size: 2.5rem;
             font-weight: 300;
             text-align: center;
-            padding: 2rem;
+            padding: .8rem 2rem;
             border: .1rem solid $base-1;
             cursor: pointer;
 
@@ -44,7 +53,9 @@
                 text-align: left;
             }
 
-            
+            @mixin atSmall {
+                padding: 2rem;
+            }
 
         }
     }

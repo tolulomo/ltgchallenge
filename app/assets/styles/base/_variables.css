@@ -11,6 +11,6 @@ $text-1: #ffffff;
 /* Color Theme 2 */
 $base-2: rgba(0, 0, 0, .5);
 $accent-2: #cc0000;
-$secondary-2: lighten($base-2, 30%);
-$button-2: lighten($base-2, 30%);
+$secondary-2: tint($base-2, 20%);
+$button-2: tint($base-2, 40%);
 $text-2: #000;
