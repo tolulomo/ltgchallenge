@@ -1,0 +1,40 @@
+.theme-1 {
+    color: $text-1;
+
+    & .calc__display {
+        background-color: $base-1;
+    }
+
+    & .calc__row-item {
+        background-color: $button-1;
+        transition: background-color .3s ease-out;
+
+        &:hover,
+        &:active {
+            background-color: tint($secondary-1, 10%);
+        }
+    }
+
+    & {
+        .function {
+            &-top{
+                background-color: $secondary-1;
+                &:hover,
+                &:visited {
+                    background-color: tint($button-1, 15%);
+                }
+            }
+
+            &-right {
+                background-color: $accent-1;
+                &:hover,
+                &:visited {
+                    background-color: tint($accent-1, 15%);
+                }
+            }
+        }
+    }
+
+
+
+}

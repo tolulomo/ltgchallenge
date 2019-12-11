@@ -1,0 +1,16 @@
+.wrapper {
+    max-width: 100rem;
+    padding: .8rem;
+    margin-left: auto;
+    margin-right: auto;
+    &--calc {
+        max-width: 40rem;
+        box-shadow: 1px 1px 5px 1px $secondary-1;
+        border-radius: .4rem;
+    }
+    
+}
+
+.u-remove-bb {
+    border-bottom: 0;
+}

@@ -1,0 +1,16 @@
+$bgColor: #f0f8ff;
+
+/* Color Theme 1 */
+
+$base-1: rgba(51,30,0, .8);
+$accent-1: #ff9f0c;
+$secondary-1: tint($base-1, 20%);
+$button-1: tint($base-1, 40%);
+$text-1: #ffffff;
+
+/* Color Theme 2 */
+$base-2: rgba(0, 0, 0, .5);
+$accent-2: #cc0000;
+$secondary-2: lighten($base-2, 30%);
+$button-2: lighten($base-2, 30%);
+$text-2: #000;
