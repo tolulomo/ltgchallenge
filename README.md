@@ -28,6 +28,10 @@ Once you are done with your edit, you can run  `npm build` to build the applicat
 ---
 
 ## Summary & Overview
-The MVC technique is adopted. The JS folder structure `app/assets/scripts/` have two main folder, the model folder and the view folder. The `App.js` serves as the controller.
+The MVC technique is adopted. The JS folder structure `app/assets/scripts/` have two main folder, the model folder and the view folder. The `App.js` serves as the controller. 
+- The `index.js` inside view folder exports all the important script to the controller. 
+- `Base.js` collects few clickable elements and distribute it within the view folder
+- `Navigation.js` exports a class that adjust the application view.
+- `Entry.js` exports a class that controls the application display. Collects events, passses it to the `model/Calculator.js` for storage and logic processing and finally collects the report for display on the screen
 
 ---
