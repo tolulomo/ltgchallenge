@@ -1,5 +1,5 @@
 # ltgchallenge
-This is a calculator
+This is a calculator. See here(https://github.com/IgorAntun/node-chat/blob/master/LICENSE)
 
 # Features
 - AC - Allows you to start over
