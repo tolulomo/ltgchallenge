@@ -34,7 +34,7 @@ The MVC technique is adopted. The JS folder structure `app/assets/scripts/` have
 - `Navigation.js` exports a class that adjust the application view.
 - `Entry.js` exports a class that controls the application display. Collects events, passses it to the `model/Calculator.js` for storage, logic processing and finally collects the report for display on the screen.
 - The `model/_calcUtility.js` handles all utilized functions used by `model/Calculator.js`.
-- The `model/Calculator` recieves all is input from `Entry.js`, filter the entry, stores it, performs mathematical operations on the entry, makes it available via three channels (i) Memory Channel (ii) Before Logic (iii) After Logic.
+- The `model/Calculator` recieves all its input from `Entry.js`, filter the entry, stores it, performs mathematical operations on the entry, makes it available via three channels (i) Memory Channel (ii) Before Logic (iii) After Logic.
 Only one of the three channel is passed depending on the state of the application.
 
 ---
