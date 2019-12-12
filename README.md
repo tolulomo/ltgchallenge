@@ -28,6 +28,6 @@ Once you are done with your edit, you can run  `npm build` to build the applicat
 ---
 
 ## Summary & Overview
-Once you are done with your edit, you can run
+The MVC technique is adopted. The JS folder structure `app/assets/scripts/` have two main folder, the model folder and the view folder. The `App.js` serves as the controller.
 
 ---
