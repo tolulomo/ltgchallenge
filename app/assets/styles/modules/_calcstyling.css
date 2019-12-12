@@ -18,6 +18,7 @@
         font-weight: 200;
         font-size: 6rem;
         text-align: right;
+        overflow: hidden;
         @mixin atSmall {
             padding: 5rem 1rem .5rem 1rem;
         }

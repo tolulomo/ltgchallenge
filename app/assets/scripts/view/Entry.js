@@ -14,9 +14,10 @@ class CalcEntry {
     }
 
     buttonPressed(e){
+        // Check for which button is pressed by finding the element closest to the click event
         const element = e.target.closest(".calc__row-item");
         if(!element){
-            return
+            return;
         }
 
         this.calculator.runEntryFunction(element.dataset.btn);

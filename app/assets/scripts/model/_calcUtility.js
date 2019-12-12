@@ -1,12 +1,33 @@
+// Function to write to calculator memory
 export const numbers = (entry, memory) => {
     if(memory.logic == null){
-        return memory.beforeLogic.push(entry);
+        const before = checkBeforeWrite(memory);
+        if(before <=7){
+            // Deny zero at the begining of an entry
+            if(entry == "0"){
+                if(memory.beforeLogic.length > 0){
+                    return memory.beforeLogic.push(entry);
+                }
+                return
+            }
+            return memory.beforeLogic.push(entry);
+        }
     } else {
-        return memory.afterLogic.push(entry);
+        const after = checkBeforeWrite(memory);
+        if(after <=7){
+            // Deny zero at the begining of an entry
+            if(entry == "0"){
+                if(memory.afterLogic.length > 0){
+                    return memory.afterLogic.push(entry);
+                }
+                return;
+            }
+            return memory.afterLogic.push(entry);
+        }
     }
 }
 
-
+// Function execute when equal sign is pressed
 export const equalTo = (memory) => {
     let before = memory.beforeLogic.findIndex(el => el === ".");
     let after = memory.afterLogic.findIndex(el => el === ".");
@@ -49,6 +70,8 @@ export const equalTo = (memory) => {
     }
 }
 
+// Function checks for what mathematical operator is pressed 
+// to determine calculation and addition entry
 export const operator = (entry, memory) => {
     let operator = "+";
     if(entry == "+"){
@@ -74,6 +97,7 @@ export const operator = (entry, memory) => {
     return memory.logic = operator;
 }
 
+// Function checks for plus or minus operator and append it to the begining of an entry
 export const plusorminus = (memory) => {
     const check = memory.beforeLogic.findIndex(el => el == "-");
     if(check > -1) {
@@ -84,12 +108,26 @@ export const plusorminus = (memory) => {
     }
 }
 
+// Combines entry input since its recieved into an array
 export const combineNumbers =(a,b) =>{
     return `${a}${b}`;
 } 
 
+// Clear calculator memory after each calculation
 const clearMemory = (memory) => {
     memory.beforeLogic = [];
     memory.afterLogic = [];
     return memory.logic = null;
+}
+
+// Function to check if maximum digit is reached (8 is max digit)
+const checkBeforeWrite = (memory) => {
+    let accum = 0;
+    if(memory.logic == null){
+        memory.beforeLogic.forEach(el => accum += el.length);
+        return accum;
+    } else {
+        memory.afterLogic.forEach(el => accum += el.length);
+        return accum;
+    }
 }
