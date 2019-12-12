@@ -32,6 +32,7 @@ The MVC technique is adopted. The JS folder structure `app/assets/scripts/` have
 - The `index.js` inside view folder exports all the important script to the controller. 
 - `Base.js` collects few clickable elements and distribute it within the view folder
 - `Navigation.js` exports a class that adjust the application view.
-- `Entry.js` exports a class that controls the application display. Collects events, passses it to the `model/Calculator.js` for storage and logic processing and finally collects the report for display on the screen
+- `Entry.js` exports a class that controls the application display. Collects events, passses it to the `model/Calculator.js` for storage and logic processing and finally collects the report for display on the screen.
+- The `model/_calcUtility.js` handles all utilized functions used by `model/Calculator.js`.
 
 ---
