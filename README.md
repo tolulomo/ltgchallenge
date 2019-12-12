@@ -26,3 +26,8 @@ Once the dependencies are installed, you can run  `npm devServer` to start the a
 Once you are done with your edit, you can run  `npm build` to build the application. The app is configured for chunk split, css min/tree-shaking and your build will be located inside the docs folder of your root dir. The css and javascript are inserted dynamically at build with new hashes for browser cache bursting
 
 ---
+
+## Summary & Overview
+Once you are done with your edit, you can run
+
+---
